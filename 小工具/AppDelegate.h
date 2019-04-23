@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BMKLocationkit/BMKLocationComponent.h>
+#import <BMKLocationkit/BMKLocationAuth.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, BMKLocationAuthDelegate> {
+    UINavigationController *navigationController;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

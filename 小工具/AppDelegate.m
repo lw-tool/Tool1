@@ -18,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[BMKLocationAuth sharedInstance] checkPermisionWithKey:@"eeyxqQvvtaDGx1GCSaYKj5Fe7vAZqDfG" authDelegate:self];
+    
+    
     MainViewController * main = [[MainViewController alloc] init];
     UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:main];
     self.window.rootViewController = nav;

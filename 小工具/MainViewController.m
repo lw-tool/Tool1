@@ -12,6 +12,9 @@
 #import "RandomViewController.h"
 #import "CutViewViewController.h"
 #import "QRCodeViewController.h"
+#import "TranslationViewController.h"
+#import "BMICalculatorViewController.h"
+#import "LocationViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView * mainTableView;
@@ -26,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"小工具";
+    self.title = NSLocalizedString(@"HomeTitle", nil);
     [self initData];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.changeLanguageBtn];
     [self.view addSubview:self.mainTableView];
@@ -133,6 +136,21 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
         break;
+        case 3: {
+            TranslationViewController * vc = [[TranslationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        };
+            break;
+        case 4: {
+            LocationViewController * vc = [[LocationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        };
+            break;
+        case 5: {
+            BMICalculatorViewController * vc = [[BMICalculatorViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        };
+            break;
         default:
             break;
     }
