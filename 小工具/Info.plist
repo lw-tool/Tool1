@@ -31,8 +31,6 @@
 	<string>app需要您的同意,才能进行定位并帮助您获取周边门店信息</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>YES</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
