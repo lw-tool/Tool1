@@ -31,12 +31,15 @@
 	<string>app需要您的同意,才能进行定位并帮助您获取周边门店信息</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>YES</string>
+<<<<<<< HEAD
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+=======
+>>>>>>> 5cdc582d4e01475eabbd9ccb5ef89319e63dfa2a
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

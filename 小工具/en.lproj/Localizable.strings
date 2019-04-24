@@ -6,3 +6,17 @@
   Copyright © 2019年 com.LW. All rights reserved.
 */
 "HomeTitle" = "PhoneTools";
+"RandomNumber" = "Generating Random Numbers";
+"WebScreenshot" = "Webpage Screenshot";
+"QRCodeMake" = "QRCode";
+"BaiduTrans" = "BaiduTrans";
+"Location" = "Location";
+"BIMCalculate" = "BIMCalculate";
+"RandomRange: " = "RandomRange: ";
+"Action" = "Action";
+"BaseURL" = "Input URL  https://";
+"OpenURL" = "Open URL";
+"ScreenShot" = "ScreenShot";
+"SaveImgFaild" = "SaveImgFaild";
+"SaveImageSuccess" = "SaveImageSuccess";
+"SaveToAlbum" = "SaveToAlbum";

@@ -24,7 +24,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
-    self.title = @"二维码生成";
+    self.title = NSLocalizedString(@"QRCodeMake", nil);
     [self setUpUI];
 }
 
@@ -93,7 +93,7 @@
     if (!_actionBtn) {
         _actionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _actionBtn.backgroundColor = [UIColor colorWithRed:101/255.0 green:199/255.0 blue:250/255.0 alpha:1];
-        [_actionBtn setTitle:@"生成二维码" forState:UIControlStateNormal];
+        [_actionBtn setTitle:NSLocalizedString(@"QRCodeMake", nil) forState:UIControlStateNormal];
         [_actionBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _actionBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         _actionBtn.layer.cornerRadius = 4;

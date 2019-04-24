@@ -31,7 +31,7 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"HomeTitle", nil);
     [self initData];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.changeLanguageBtn];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.changeLanguageBtn];
     [self.view addSubview:self.mainTableView];
     [_mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
@@ -41,7 +41,7 @@
 
 #pragma mark   init dataSource
 -(void)initData{
-    self.dataSourceArray = @[@"随机数生成",@"网页截图",@"二维码生成",@"百度翻译",@"我的位置",@"BIM计算器"];
+    self.dataSourceArray = @[NSLocalizedString(@"RandomNumber", nil),NSLocalizedString(@"WebScreenshot", nil),NSLocalizedString(@"QRCodeMake", nil),NSLocalizedString(@"BaiduTrans", nil),NSLocalizedString(@"Location", nil),NSLocalizedString(@"BIMCalculate", nil)];
     self.languageArr = @[@"中文",@"English",@"한국어"];
     self.selectIndex = 0;
 }

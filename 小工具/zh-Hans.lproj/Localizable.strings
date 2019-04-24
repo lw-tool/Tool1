@@ -6,3 +6,17 @@
   Copyright © 2019年 com.LW. All rights reserved.
 */
 "HomeTitle" = "小工具";
+"RandomNumber" = "生成随机数";
+"WebScreenshot" = "网页截图";
+"QRCodeMake" = "二维码生成";
+"BaiduTrans" = "百度翻译";
+"Location" = "我的位置";
+"BIMCalculate" = "BIM计算器";
+"RandomRange: " = "随机数范围: ";
+"Action" = "完成";
+"BaseURL" = "请输入网址  https://";
+"OpenURL" = "打开网页";
+"ScreenShot" = "截屏";
+"SaveImgFaild" = "保存图片失败";
+"SaveImageSuccess" = "保存图片成功";
+"SaveToAlbum" = "保存至相册";

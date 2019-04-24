@@ -6,3 +6,17 @@
   Copyright © 2019年 com.LW. All rights reserved.
 */
 "HomeTitle" = "휴대폰 소형 도구";
+"RandomNumber" = "랜덤 수 생성";
+"WebScreenshot" = "홈페이지 캡처";
+"QRCodeMake" = "2차원 코드 생성";
+"BaiduTrans" = "바이두 번역";
+"BaiduTrans" = "나의 위치";
+"BIMCalculate" = "BIM 계산기";
+"RandomRange: " = "랜덤 범위: ";
+"Action" = "완성";
+"BaseURL" = "인터넷 주소 https://";
+"OpenURL" = "홈페이지 열기";
+"ScreenShot" = "캡처";
+"SaveImageSuccess" = "그림 저장 성공";
+"SaveImgFaild" = "그림 저장 실패";
+"SaveToAlbum" = "앨범 저장";

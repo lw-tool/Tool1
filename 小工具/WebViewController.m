@@ -44,9 +44,9 @@
 -(void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     NSString *msg = nil ;
     if(error){
-        msg = @"保存图片失败" ;
+        msg = NSLocalizedString(@"SaveImgFaild", nil) ; ;
     }else{
-        msg = @"保存图片成功" ;
+        msg = NSLocalizedString(@"SaveImageSuccess", nil) ;
     }
     
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle:nil message:msg preferredStyle:UIAlertControllerStyleAlert];
@@ -61,7 +61,7 @@
     if (!_actionButton) {
         _actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _actionButton.frame = CGRectMake(0, 0, 50, 40);
-        [_actionButton setTitle:@"截屏" forState:UIControlStateNormal];
+        [_actionButton setTitle:NSLocalizedString(@"ScreenShot", nil) forState:UIControlStateNormal];
         [_actionButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         _actionButton.titleLabel.font = [UIFont systemFontOfSize:14];
         [_actionButton addTarget:self action:@selector(onViewClick:) forControlEvents:UIControlEventTouchUpInside];
