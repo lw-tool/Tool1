@@ -33,6 +33,11 @@
 		017BB233226EEBD00013FD55 /* QRShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BB232226EEBD00013FD55 /* QRShowViewController.m */; };
 		017BB23A226F420D0013FD55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 017BB23C226F420D0013FD55 /* Localizable.strings */; };
 		017BB241226F47BA0013FD55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 017BB243226F47BA0013FD55 /* InfoPlist.strings */; };
+		942F1222227028F60015E546 /* UMPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F1221227028F60015E546 /* UMPush.framework */; };
+		942F1224227029160015E546 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F1223227029160015E546 /* libz.tbd */; };
+		942F12262270291D0015E546 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F12252270291D0015E546 /* libsqlite3.tbd */; };
+		942F1228227029670015E546 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F1227227029670015E546 /* UserNotifications.framework */; };
+		942F122B22702A950015E546 /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F122A22702A950015E546 /* UMCommon.framework */; };
 		9448413B226F1BB20089A65B /* BMICalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94484136226F1BB10089A65B /* BMICalculatorViewController.m */; };
 		9448413C226F1BB20089A65B /* TranslationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94484138226F1BB20089A65B /* TranslationViewController.m */; };
 		9448413D226F1BB20089A65B /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94484139226F1BB20089A65B /* LocationViewController.m */; };
@@ -127,6 +132,12 @@
 		017BB242226F47BA0013FD55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		017BB244226F47BE0013FD55 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		017BB245226F47C00013FD55 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		942F1221227028F60015E546 /* UMPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMPush.framework; sourceTree = "<group>"; };
+		942F1223227029160015E546 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		942F12252270291D0015E546 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		942F1227227029670015E546 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		942F12292270297A0015E546 /* 小工具.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "小工具.entitlements"; sourceTree = "<group>"; };
+		942F122A22702A950015E546 /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
 		94484135226F1BB10089A65B /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		94484136226F1BB10089A65B /* BMICalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMICalculatorViewController.m; sourceTree = "<group>"; };
 		94484137226F1BB10089A65B /* TranslationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslationViewController.h; sourceTree = "<group>"; };
@@ -148,14 +159,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942F1228227029670015E546 /* UserNotifications.framework in Frameworks */,
+				94484144226F1BEC0089A65B /* SystemConfiguration.framework in Frameworks */,
+				942F12262270291D0015E546 /* libsqlite3.tbd in Frameworks */,
+				942F122B22702A950015E546 /* UMCommon.framework in Frameworks */,
+				942F1224227029160015E546 /* libz.tbd in Frameworks */,
 				9448414E226F1C0C0089A65B /* AdSupport.framework in Frameworks */,
 				9448414C226F1C070089A65B /* libc++.tbd in Frameworks */,
 				9448414A226F1C000089A65B /* CoreTelephony.framework in Frameworks */,
 				94484148226F1BF80089A65B /* libsqlite3.0.tbd in Frameworks */,
 				94484146226F1BF10089A65B /* Security.framework in Frameworks */,
-				94484144226F1BEC0089A65B /* SystemConfiguration.framework in Frameworks */,
 				94484142226F1BE70089A65B /* CoreLocation.framework in Frameworks */,
 				9448413F226F1BC10089A65B /* BMKLocationKit.framework in Frameworks */,
+				942F1222227028F60015E546 /* UMPush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +216,9 @@
 		017BB1C8226EA65D0013FD55 /* 小工具 */ = {
 			isa = PBXGroup;
 			children = (
+				942F122A22702A950015E546 /* UMCommon.framework */,
+				942F12292270297A0015E546 /* 小工具.entitlements */,
+				942F1221227028F60015E546 /* UMPush.framework */,
 				017BB243226F47BA0013FD55 /* InfoPlist.strings */,
 				017BB23C226F420D0013FD55 /* Localizable.strings */,
 				9448413E226F1BC10089A65B /* BMKLocationKit.framework */,
@@ -288,6 +307,9 @@
 		94484140226F1BE70089A65B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				942F1227227029670015E546 /* UserNotifications.framework */,
+				942F12252270291D0015E546 /* libsqlite3.tbd */,
+				942F1223227029160015E546 /* libz.tbd */,
 				9448414D226F1C0B0089A65B /* AdSupport.framework */,
 				9448414B226F1C070089A65B /* libc++.tbd */,
 				94484149226F1C000089A65B /* CoreTelephony.framework */,
@@ -366,6 +388,14 @@
 				TargetAttributes = {
 					017BB1C5226EA65D0013FD55 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					017BB1DD226EA65F0013FD55 = {
 						CreatedOnToolsVersion = 10.1;
@@ -651,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "小工具/小工具.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PVS2BL8MB4;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -674,6 +705,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "小工具/小工具.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PVS2BL8MB4;
 				FRAMEWORK_SEARCH_PATHS = (
