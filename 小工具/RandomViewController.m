@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"随机数生成";
+    self.title = NSLocalizedString(@"RandomNumber", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupUI];
     // Do any additional setup after loading the view.
@@ -112,7 +112,7 @@
         _randomRangeLbl = [[UILabel alloc] init];
         _randomRangeLbl.textColor = [UIColor blackColor];
         _randomRangeLbl.font = [UIFont systemFontOfSize:16];
-        _randomRangeLbl.text = @"随机数范围: ";
+        _randomRangeLbl.text = NSLocalizedString(@"RandomRange: ", nil);
     }
     return _randomRangeLbl;
 }
@@ -159,7 +159,7 @@
     if (!_actionBtn) {
         _actionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _actionBtn.backgroundColor = [UIColor cyanColor];
-        [_actionBtn setTitle:@"完成" forState:UIControlStateNormal];
+        [_actionBtn setTitle:NSLocalizedString(@"Action", nil) forState:UIControlStateNormal];
         [_actionBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _actionBtn.titleLabel.font = [UIFont systemFontOfSize:20];
         [_actionBtn addTarget:self action:@selector(onViewClick:) forControlEvents:UIControlEventTouchUpInside];

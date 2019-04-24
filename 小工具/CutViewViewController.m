@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"网页截图";
+    self.title = NSLocalizedString(@"WebScreenshot", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupUI];
     // Do any additional setup after loading the view.
@@ -92,7 +92,7 @@
         _infoLbl = [[UILabel alloc] init];
         _infoLbl.font = [UIFont systemFontOfSize:16];
         _infoLbl.textColor = [UIColor darkTextColor];
-        _infoLbl.text = @"请输入网址  https://";
+        _infoLbl.text = NSLocalizedString(@"BaseURL", nil);
         _infoLbl.textAlignment = NSTextAlignmentLeft;
     }
     return _infoLbl;
@@ -115,7 +115,7 @@
         _actionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _actionBtn.backgroundColor = [UIColor colorWithRed:101/255.0 green:199/255.0 blue:250/255.0 alpha:1];
         _actionBtn.layer.cornerRadius = 4;
-        [_actionBtn setTitle:@"打开网页" forState:UIControlStateNormal];
+        [_actionBtn setTitle:NSLocalizedString(@"OpenURL", nil) forState:UIControlStateNormal];
         [_actionBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_actionBtn addTarget:self action:@selector(onViewClick:) forControlEvents:UIControlEventTouchUpInside];
     }

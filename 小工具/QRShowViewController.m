@@ -56,10 +56,10 @@
 -(void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     NSString *msg = nil ;
     if(error){
-        msg = @"保存图片失败" ;
+        msg = NSLocalizedString(@"SaveImgFaild", nil) ;
         NSLog(@"%@",error.debugDescription);
     }else{
-        msg = @"保存图片成功" ;
+        msg = NSLocalizedString(@"SaveImageSuccess", nil) ;
     }
     
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle:nil message:msg preferredStyle:UIAlertControllerStyleAlert];
@@ -83,7 +83,7 @@
     if (!_actionBtn) {
         _actionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _actionBtn.backgroundColor = [UIColor colorWithRed:101/255.0 green:199/255.0 blue:250/255.0 alpha:1];
-        [_actionBtn setTitle:@"保存至相册" forState:UIControlStateNormal];
+        [_actionBtn setTitle:NSLocalizedString(@"SaveToAlbum", nil) forState:UIControlStateNormal];
         [_actionBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _actionBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         [_actionBtn addTarget:self action:@selector(onViewClick:) forControlEvents:UIControlEventTouchUpInside];
