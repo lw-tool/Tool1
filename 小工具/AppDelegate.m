@@ -11,6 +11,7 @@
 #import <UMCommon/UMCommon.h>
 #import <UMPush/UMessage.h>
 #import <UserNotifications/UserNotifications.h>
+#import <UMCommonLog/UMCommonLogHeaders.h>
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
@@ -27,7 +28,10 @@
     
     
     //umeng
-     [UMConfigure initWithAppkey:@"59892ebcaed179694b000104" channel:@"App Store"];
+    //开发者需要显式的调用此函数，日志系统才能工作
+    [UMCommonLogManager setUpUMCommonLogManager];
+    [UMConfigure setLogEnabled:YES];
+     [UMConfigure initWithAppkey:@"5cc14c623fc195bbb800091e" channel:@"App Store"];
     
     // Push's basic setting
     UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
@@ -49,7 +53,16 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
-
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    
+       
+        //用户可以在这个方法里面获取devicetoken
+        NSLog(@"deviceToken====%@",[[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                                                       stringByReplacingOccurrencesOfString: @">" withString: @""]
+                                                     stringByReplacingOccurrencesOfString: @" " withString: @""]);
+        
+}
 //iOS10以下使用这两个方法接收通知，
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
