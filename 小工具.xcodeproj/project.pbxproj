@@ -39,9 +39,7 @@
 		942F12262270291D0015E546 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F12252270291D0015E546 /* libsqlite3.tbd */; };
 		942F1228227029670015E546 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F1227227029670015E546 /* UserNotifications.framework */; };
 		942F122B22702A950015E546 /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F122A22702A950015E546 /* UMCommon.framework */; };
-
 		9443C2722271A204006C8E98 /* UMCommonLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9443C2712271A203006C8E98 /* UMCommonLog.framework */; };
-
 		9448413B226F1BB20089A65B /* BMICalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94484136226F1BB10089A65B /* BMICalculatorViewController.m */; };
 		9448413C226F1BB20089A65B /* TranslationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94484138226F1BB20089A65B /* TranslationViewController.m */; };
 		9448413D226F1BB20089A65B /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94484139226F1BB20089A65B /* LocationViewController.m */; };
@@ -144,9 +142,7 @@
 		942F1227227029670015E546 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		942F12292270297A0015E546 /* 小工具.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "小工具.entitlements"; sourceTree = "<group>"; };
 		942F122A22702A950015E546 /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
-
 		9443C2712271A203006C8E98 /* UMCommonLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommonLog.framework; sourceTree = "<group>"; };
-
 		94484135226F1BB10089A65B /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		94484136226F1BB10089A65B /* BMICalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMICalculatorViewController.m; sourceTree = "<group>"; };
 		94484137226F1BB10089A65B /* TranslationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslationViewController.h; sourceTree = "<group>"; };
@@ -697,11 +693,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "小工具/小工具.entitlements";
-
 				CODE_SIGN_STYLE = Manual;
-
-				CODE_SIGN_STYLE = Automatic;
-
 				DEVELOPMENT_TEAM = PVS2BL8MB4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -729,12 +721,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "小工具/小工具.entitlements";
-
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-
-				CODE_SIGN_STYLE = Automatic;
-
 				DEVELOPMENT_TEAM = PVS2BL8MB4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
