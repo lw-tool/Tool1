@@ -23,18 +23,34 @@
 @property (nonatomic, strong) UIButton * changeLanguageBtn;
 @property (nonatomic, copy)NSArray * languageArr;
 @property (nonatomic, assign) NSInteger selectIndex;
+
+@property (nonatomic, strong) UILabel * bottomLbl;
 @end
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.title = NSLocalizedString(@"HomeTitle", nil);
     [self initData];
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.changeLanguageBtn];
     [self.view addSubview:self.mainTableView];
+    [self.view addSubview:self.bottomLbl];
     [_mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
+        make.left.right.mas_equalTo(0);
+        make.top.mas_equalTo(0);
+        make.bottom.mas_equalTo(-80);
+    }];
+    
+    [_bottomLbl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.view.mas_centerX);
+        make.width.mas_equalTo(screenWidth);
+        if (IS_IPHONE_X) {
+            make.bottom.mas_equalTo(-25);
+        }else{
+            make.bottom.mas_equalTo(0);
+        }
     }];
 }
 
@@ -83,6 +99,7 @@
 -(UITableView *)mainTableView{
     if (!_mainTableView) {
         _mainTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _mainTableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
         _mainTableView.backgroundColor = [UIColor whiteColor];
         _mainTableView.rowHeight = UITableViewAutomaticDimension;
         _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -91,6 +108,18 @@
         _mainTableView.dataSource = self;
     }
     return _mainTableView;
+}
+
+-(UILabel *)bottomLbl{
+    if (!_bottomLbl) {
+        _bottomLbl = [[UILabel alloc] init];
+        _bottomLbl.text = NSLocalizedString(@"openNewLife", nil);
+        _bottomLbl.backgroundColor = [UIColor clearColor];
+        _bottomLbl.font = [UIFont systemFontOfSize:30];
+        _bottomLbl.textAlignment = NSTextAlignmentCenter;
+        _bottomLbl.textColor = [UIColor colorWithRed:237.0/255 green:80.0/255 blue:86.0/255 alpha:1];
+    }
+    return _bottomLbl;
 }
 
 #pragma mark UITableViewDelegate & UITableViewDataSource

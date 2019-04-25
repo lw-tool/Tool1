@@ -8,8 +8,7 @@
 
 #import "WebViewController.h"
 
-#define screenWidth [[UIScreen mainScreen] bounds].size.width
-#define screenHeight [[UIScreen mainScreen] bounds].size.height
+
 
 @interface WebViewController ()
 
