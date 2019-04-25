@@ -693,13 +693,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "小工具/小工具.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = PVS2BL8MB4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/小工具",
 				);
-				GCC_PREFIX_HEADER = "/Users/liuwei/Desktop/ZYRF/code/工具/Tool1/小工具/prc-header.h";
+				GCC_PREFIX_HEADER = "小工具/prc-header.h";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "小工具/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -710,7 +711,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lw.tool1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Tool1Development;
+				PROVISIONING_PROFILE_SPECIFIER = Tool1Distribution;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -728,7 +729,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/小工具",
 				);
-				GCC_PREFIX_HEADER = "/Users/liuwei/Desktop/ZYRF/code/工具/Tool1/小工具/prc-header.h";
+				GCC_PREFIX_HEADER = "小工具/prc-header.h";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "小工具/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

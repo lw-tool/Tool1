@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"百度翻译";
+    self.title = NSLocalizedString(@"BaiduTrans", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     [self creatUI];
 }
