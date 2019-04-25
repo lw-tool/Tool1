@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"BMI计算器";
+     self.title = NSLocalizedString(@"BIMCalculate", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     [self creatUI];
 }
@@ -108,19 +108,19 @@
     float result = self.showWeightTF.text.floatValue/((self.showHeightTF.text.floatValue/100)*(self.showHeightTF.text.floatValue/100));
     NSString *resultString;
     if (result<18.5) {
-        resultString = @"您属于偏瘦，建议增加营养和加强锻炼。";
+        resultString = NSLocalizedString(@"lean", nil);
     }else if (result>=18.5 &&result<23.9){
-        resultString = @"您属于正常，继续保持哟。";
+        resultString = NSLocalizedString(@"normal", nil);
     }else if (result>=23.9 &&result<26.9){
-        resultString = @"您属于偏胖，建议改善饮食和加强锻炼。";
+        resultString = NSLocalizedString(@"chubby", nil);
     }
     else if (result>=26.9 &&result<29.9){
-        resultString = @"您属于肥胖，建议改善和加强锻炼。管住嘴，迈开腿，帮助您打造好身材。";
+        resultString = NSLocalizedString(@"obesity", nil);
     }
     else if (result>=29.9){
-        resultString = @"您属于重度肥胖，建议改善和加强锻炼。管住嘴，迈开腿，帮助您打造好身材。算了，该吃吃该喝喝吧，别挣扎了。";
+        resultString = NSLocalizedString(@"Severe obesity", nil);
     }
-    self.showResultLab.text = [NSString stringWithFormat:@"您的BMI是：%f，%@",result,resultString];
+    self.showResultLab.text = [NSString stringWithFormat:@"%@：%f，%@",NSLocalizedString(@"result", nil),result,resultString];
     
 }
 #pragma mark getter
@@ -138,7 +138,7 @@
     
     if (!_showWeightLab) {
         _showWeightLab = [[UILabel alloc]init];
-        _showWeightLab.text = @"体重";
+        _showWeightLab.text = NSLocalizedString(@"weight", nil);
         _showWeightLab.textColor = [UIColor blackColor];
     }
     return _showWeightLab;
@@ -147,7 +147,7 @@
     
     if (!_showHeightLab) {
         _showHeightLab = [[UILabel alloc]init];
-        _showHeightLab.text = @"身高";
+        _showHeightLab.text = NSLocalizedString(@"height", nil);
         _showHeightLab.textColor = [UIColor blackColor];
     }
     return _showHeightLab;
@@ -199,7 +199,7 @@
     if (!_actionBtn) {
         _actionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _actionBtn.backgroundColor = [UIColor colorWithRed:237.0/255 green:80.0/255 blue:86.0/255 alpha:1];
-        [_actionBtn setTitle:@"开始计算" forState:UIControlStateNormal];
+        [_actionBtn setTitle:NSLocalizedString(@"Action", nil) forState:UIControlStateNormal];
         [_actionBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _actionBtn.titleLabel.font = [UIFont systemFontOfSize:20];
         [_actionBtn addTarget:self action:@selector(onViewClick:) forControlEvents:UIControlEventTouchUpInside];

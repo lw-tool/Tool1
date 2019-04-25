@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"我的位置";
+    self.title = NSLocalizedString(@"Location", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     [self creatUI];
     [self startBaiduMapService];
@@ -178,21 +178,22 @@
             __weak typeof(self) weakSelf = self;
             
             
-            self.cooLab.text = [NSString stringWithFormat:@"经度：%.6f",location.location.coordinate.latitude];
-            self.latLab.text = [NSString stringWithFormat:@"纬度：%.6f",location.location.coordinate.longitude];
+            self.cooLab.text = [NSString stringWithFormat:@"%@：%.6f",NSLocalizedString(@"latitude", nil),location.location.coordinate.longitude];
+            self.latLab.text = [NSString stringWithFormat:@"%@：%.6f",NSLocalizedString(@"longitude", nil),location.location.coordinate.latitude];
             if (location.rgcData) {
                 NSLog(@"rgc = %@",[location.rgcData description]);
             }
             
             
         }
+        //NSLocalizedString(@"Location", nil);
         if (location.rgcData) {
             //                        NSLog(@"rgc = %@",[location.rgcData description]);
-            self.provinceLab.text = [NSString stringWithFormat:@"省份：%@",location.rgcData.province];
-            self.districtLab.text = [NSString stringWithFormat:@"区镇：%@",location.rgcData.district];
-            self.streetLab.text = [NSString stringWithFormat:@"街道：%@",location.rgcData.street];
-            self.streetNumberLab.text = [NSString stringWithFormat:@"街道号：%@",location.rgcData.streetNumber];
-            self.locationDescribeLab.text = [NSString stringWithFormat:@"具体描述：%@",location.rgcData.locationDescribe];
+            self.provinceLab.text = [NSString stringWithFormat:@"%@：%@",NSLocalizedString(@"province", nil),location.rgcData.province];
+            self.districtLab.text = [NSString stringWithFormat:@"%@：%@",NSLocalizedString(@"district", nil),location.rgcData.district];
+            self.streetLab.text = [NSString stringWithFormat:@"%@：%@",NSLocalizedString(@"street", nil),location.rgcData.street];
+            self.streetNumberLab.text = [NSString stringWithFormat:@"%@：%@",NSLocalizedString(@"streetNumber", nil),location.rgcData.streetNumber];
+            self.locationDescribeLab.text = [NSString stringWithFormat:@"%@：%@",NSLocalizedString(@"locationDescribe", nil),location.rgcData.locationDescribe];
         }
         
         //                NSLog(@"netstate = %d",state);
