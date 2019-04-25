@@ -11,7 +11,7 @@
 "QRCodeMake" = "2차원 코드 생성";
 "BaiduTrans" = "바이두 번역";
 "BaiduTrans" = "나의 위치";
-"BIMCalculate" = "BIM 계산기";
+"BIMCalculate" = "BMI 계산기";
 "RandomRange: " = "랜덤 범위: ";
 "Action" = "완성";
 "BaseURL" = "인터넷 주소 https://";
@@ -20,3 +20,4 @@
 "SaveImageSuccess" = "그림 저장 성공";
 "SaveImgFaild" = "그림 저장 실패";
 "SaveToAlbum" = "앨범 저장";
+"openNewLife" = "멋진 생활을 열다";

@@ -33,14 +33,12 @@
 		017BB233226EEBD00013FD55 /* QRShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BB232226EEBD00013FD55 /* QRShowViewController.m */; };
 		017BB23A226F420D0013FD55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 017BB23C226F420D0013FD55 /* Localizable.strings */; };
 		017BB241226F47BA0013FD55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 017BB243226F47BA0013FD55 /* InfoPlist.strings */; };
-
+		017BB247227002600013FD55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 017BB246227002600013FD55 /* Images.xcassets */; };
 		942F1222227028F60015E546 /* UMPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F1221227028F60015E546 /* UMPush.framework */; };
 		942F1224227029160015E546 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F1223227029160015E546 /* libz.tbd */; };
 		942F12262270291D0015E546 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F12252270291D0015E546 /* libsqlite3.tbd */; };
 		942F1228227029670015E546 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F1227227029670015E546 /* UserNotifications.framework */; };
 		942F122B22702A950015E546 /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942F122A22702A950015E546 /* UMCommon.framework */; };
-
-		017BB247227002600013FD55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 017BB246227002600013FD55 /* Images.xcassets */; };
 		9448413B226F1BB20089A65B /* BMICalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94484136226F1BB10089A65B /* BMICalculatorViewController.m */; };
 		9448413C226F1BB20089A65B /* TranslationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94484138226F1BB20089A65B /* TranslationViewController.m */; };
 		9448413D226F1BB20089A65B /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94484139226F1BB20089A65B /* LocationViewController.m */; };
@@ -72,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014BCBF322718B7D00C6A345 /* prc-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "prc-header.h"; sourceTree = "<group>"; };
 		017BB1C6226EA65D0013FD55 /* 小工具.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小工具.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		017BB1C9226EA65D0013FD55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		017BB1CA226EA65D0013FD55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -135,16 +134,13 @@
 		017BB242226F47BA0013FD55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		017BB244226F47BE0013FD55 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		017BB245226F47C00013FD55 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-
+		017BB246227002600013FD55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		942F1221227028F60015E546 /* UMPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMPush.framework; sourceTree = "<group>"; };
 		942F1223227029160015E546 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		942F12252270291D0015E546 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		942F1227227029670015E546 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		942F12292270297A0015E546 /* 小工具.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "小工具.entitlements"; sourceTree = "<group>"; };
 		942F122A22702A950015E546 /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
-
-		017BB246227002600013FD55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-
 		94484135226F1BB10089A65B /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		94484136226F1BB10089A65B /* BMICalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMICalculatorViewController.m; sourceTree = "<group>"; };
 		94484137226F1BB10089A65B /* TranslationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslationViewController.h; sourceTree = "<group>"; };
@@ -258,6 +254,7 @@
 				017BB1D7226EA65F0013FD55 /* Info.plist */,
 				017BB1D8226EA65F0013FD55 /* main.m */,
 				017BB246227002600013FD55 /* Images.xcassets */,
+				014BCBF322718B7D00C6A345 /* prc-header.h */,
 			);
 			path = "小工具";
 			sourceTree = "<group>";
@@ -690,17 +687,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-
-				CODE_SIGN_ENTITLEMENTS = "小工具/小工具.entitlements";
-
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "小工具/小工具.entitlements";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = PVS2BL8MB4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/小工具",
 				);
+				GCC_PREFIX_HEADER = "/Users/liuwei/Desktop/ZYRF/code/工具/Tool1/小工具/prc-header.h";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "小工具/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -708,8 +704,9 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "lw.---";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lw.tool1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Tool1Development;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -718,17 +715,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-
-				CODE_SIGN_ENTITLEMENTS = "小工具/小工具.entitlements";
-
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "小工具/小工具.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = PVS2BL8MB4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/小工具",
 				);
+				GCC_PREFIX_HEADER = "/Users/liuwei/Desktop/ZYRF/code/工具/Tool1/小工具/prc-header.h";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "小工具/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -736,8 +733,9 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "lw.---";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lw.tool1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Tool1Distribution;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

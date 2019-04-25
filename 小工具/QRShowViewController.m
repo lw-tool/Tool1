@@ -9,8 +9,7 @@
 #import "QRShowViewController.h"
 #import "Masonry/Masonry.h"
 
-#define screenWidth [[UIScreen mainScreen] bounds].size.width
-#define screenHeight [[UIScreen mainScreen] bounds].size.height
+
 
 @interface QRShowViewController ()
 
@@ -32,7 +31,7 @@
 #pragma mark setupUI
 -(void)setupUI{
     [self.view addSubview:self.mainImageView];
-//    [self.view addSubview:self.actionBtn];
+    [self.view addSubview:self.actionBtn];
     [_mainImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.view.mas_centerX);
         make.top.mas_equalTo(20+84+80);
@@ -40,12 +39,16 @@
         make.height.mas_equalTo(self.mainImage.size.height);
     }];
     
-//    [_actionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.mas_equalTo(15);
-//        make.right.mas_equalTo(-15);
-//        make.bottom.mas_equalTo(0);
-//        make.height.mas_equalTo(50);
-//    }];
+    [_actionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(15);
+        make.right.mas_equalTo(-15);
+        make.height.mas_equalTo(50);
+        if (IS_IPHONE_X) {
+            make.bottom.mas_equalTo(-25);
+        }else{
+            make.bottom.mas_equalTo(0);
+        }
+    }];
 }
 
 #pragma mark onViewClick
@@ -82,7 +85,7 @@
 -(UIButton *)actionBtn{
     if (!_actionBtn) {
         _actionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _actionBtn.backgroundColor = [UIColor colorWithRed:101/255.0 green:199/255.0 blue:250/255.0 alpha:1];
+        _actionBtn.backgroundColor = [UIColor colorWithRed:237.0/255 green:80.0/255 blue:86.0/255 alpha:1];
         [_actionBtn setTitle:NSLocalizedString(@"SaveToAlbum", nil) forState:UIControlStateNormal];
         [_actionBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _actionBtn.titleLabel.font = [UIFont systemFontOfSize:16];

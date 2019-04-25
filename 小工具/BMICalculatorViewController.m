@@ -95,9 +95,10 @@
     
     
     [_actionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(0);
+        
         make.width.mas_equalTo(screenWidth);
         make.height.mas_equalTo(100);
+        make.bottom.mas_equalTo(0);
     }];
     
 }
@@ -197,7 +198,7 @@
 -(UIButton *)actionBtn{
     if (!_actionBtn) {
         _actionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _actionBtn.backgroundColor = [UIColor cyanColor];
+        _actionBtn.backgroundColor = [UIColor colorWithRed:237.0/255 green:80.0/255 blue:86.0/255 alpha:1];
         [_actionBtn setTitle:@"开始计算" forState:UIControlStateNormal];
         [_actionBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _actionBtn.titleLabel.font = [UIFont systemFontOfSize:20];

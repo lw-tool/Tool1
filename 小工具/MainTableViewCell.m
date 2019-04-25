@@ -19,7 +19,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-
+    
     
 }
 
@@ -42,11 +42,14 @@
     if (!_mainLbl) {
         _mainLbl = [[UILabel alloc] init];
         _mainLbl.layer.cornerRadius = 6;
-        _mainLbl.layer.borderColor = [UIColor blackColor].CGColor;
-        _mainLbl.layer.borderWidth = 1;
+        _mainLbl.layer.masksToBounds = YES;
+//        _mainLbl.layer.borderColor = [UIColor blackColor].CGColor;
+//        _mainLbl.layer.borderWidth = 1;
         _mainLbl.textAlignment =  NSTextAlignmentCenter;
         _mainLbl.textColor = [UIColor blackColor];
         _mainLbl.font = [UIFont systemFontOfSize:16];
+//        _mainLbl.backgroundColor = [UIColor colorWithRed:142.0/255 green:207.0/255 blue:247.0/255 alpha:1];
+        _mainLbl.backgroundColor = [UIColor colorWithRed:237.0/255 green:80.0/255 blue:86.0/255 alpha:1];
     }
     return _mainLbl;
 }

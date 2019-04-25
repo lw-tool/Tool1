@@ -69,8 +69,13 @@
     //拿到二维码图片，此时的图片不是很清晰，需要二次加工
     CIImage *outPutImage = [filter outputImage];
     
+    CGFloat scaleX = 200 / outPutImage.extent.size.width; // extent 返回图片的frame
+    CGFloat scaleY = 200 / outPutImage.extent.size.height;
+    CIImage *transformedImage = [outPutImage imageByApplyingTransform:CGAffineTransformScale(CGAffineTransformIdentity, scaleX, scaleY)];
+    
+    
     QRShowViewController * vc = [[QRShowViewController alloc] init];
-    vc.mainImage = [UIImage imageWithCIImage:outPutImage];
+    vc.mainImage = [UIImage imageWithCIImage:transformedImage];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -92,7 +97,7 @@
 -(UIButton *)actionBtn{
     if (!_actionBtn) {
         _actionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _actionBtn.backgroundColor = [UIColor colorWithRed:101/255.0 green:199/255.0 blue:250/255.0 alpha:1];
+        _actionBtn.backgroundColor = [UIColor colorWithRed:237.0/255 green:80.0/255 blue:86.0/255 alpha:1];
         [_actionBtn setTitle:NSLocalizedString(@"QRCodeMake", nil) forState:UIControlStateNormal];
         [_actionBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _actionBtn.titleLabel.font = [UIFont systemFontOfSize:16];

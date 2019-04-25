@@ -11,7 +11,7 @@
 "QRCodeMake" = "QRCode";
 "BaiduTrans" = "BaiduTrans";
 "Location" = "Location";
-"BIMCalculate" = "BIMCalculate";
+"BIMCalculate" = "BMICalculate";
 "RandomRange: " = "RandomRange: ";
 "Action" = "Action";
 "BaseURL" = "Input URL  https://";
@@ -20,3 +20,4 @@
 "SaveImgFaild" = "SaveImgFaild";
 "SaveImageSuccess" = "SaveImageSuccess";
 "SaveToAlbum" = "SaveToAlbum";
+"openNewLife" = "Open Your New Life";
