@@ -11,7 +11,7 @@
 "QRCodeMake" = "二维码生成";
 "BaiduTrans" = "百度翻译";
 "Location" = "我的位置";
-"BIMCalculate" = "BIM计算器";
+"BIMCalculate" = "BMI计算器";
 "RandomRange: " = "随机数范围: ";
 "Action" = "完成";
 "BaseURL" = "请输入网址  https://";
@@ -20,3 +20,4 @@
 "SaveImgFaild" = "保存图片失败";
 "SaveImageSuccess" = "保存图片成功";
 "SaveToAlbum" = "保存至相册";
+"openNewLife" = "开启您的精彩生活";

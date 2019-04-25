@@ -9,8 +9,7 @@
 #import "RandomViewController.h"
 #import "Masonry/Masonry.h"
 
-#define screenWidth [[UIScreen mainScreen] bounds].size.width
-#define screenHeight [[UIScreen mainScreen] bounds].size.height
+
 
 @interface RandomViewController ()<UITextFieldDelegate>
 
@@ -158,7 +157,7 @@
 -(UIButton *)actionBtn{
     if (!_actionBtn) {
         _actionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _actionBtn.backgroundColor = [UIColor cyanColor];
+        _actionBtn.backgroundColor = [UIColor colorWithRed:237.0/255 green:80.0/255 blue:86.0/255 alpha:1];
         [_actionBtn setTitle:NSLocalizedString(@"Action", nil) forState:UIControlStateNormal];
         [_actionBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _actionBtn.titleLabel.font = [UIFont systemFontOfSize:20];
