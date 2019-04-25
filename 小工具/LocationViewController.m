@@ -153,7 +153,7 @@
     return _locationDescribeLab;
 }
 - (void)startBaiduMapService {
-
+    
     _isNeedAddr = YES;
     _isNeedHotSpot = YES;
     [self initBlock];
@@ -165,40 +165,37 @@
 
 -(void)initBlock
 {
-    //    __weak JBSWKWebViewController *weakSelf = self;
     self.completionBlock = ^(BMKLocation *location, BMKLocationNetworkState state, NSError *error)
     {
         if (error)
         {
             
-            if((long)error.code==1){
-               
-            }
+             NSLog(@"locError:{%ld - %@};", (long)error.code, error.localizedDescription);
             
         }
         
         if (location.location) {//得到定位信息，添加annotation
             __weak typeof(self) weakSelf = self;
             
-            NSString *lat = [NSString stringWithFormat:@"%.6f",location.location.coordinate.latitude];
-            NSString *lon =[NSString stringWithFormat:@"%.6f",location.location.coordinate.longitude];
-            self.cooLab.text = [NSString stringWithFormat:@"经度：%f",lat];
-            self.latLab.text = [NSString stringWithFormat:@"纬度：%f",lon];
-          
-           
+            
+            self.cooLab.text = [NSString stringWithFormat:@"经度：%.6f",location.location.coordinate.latitude];
+            self.latLab.text = [NSString stringWithFormat:@"纬度：%.6f",location.location.coordinate.longitude];
+            if (location.rgcData) {
+                NSLog(@"rgc = %@",[location.rgcData description]);
+            }
+            
             
         }
-        
         if (location.rgcData) {
-//                        NSLog(@"rgc = %@",[location.rgcData description]);
+            //                        NSLog(@"rgc = %@",[location.rgcData description]);
             self.provinceLab.text = [NSString stringWithFormat:@"省份：%@",location.rgcData.province];
-             self.districtLab.text = [NSString stringWithFormat:@"区镇：%@",location.rgcData.district];
-             self.streetLab.text = [NSString stringWithFormat:@"街道：%@",location.rgcData.street];
-             self.streetNumberLab.text = [NSString stringWithFormat:@"街道号：%@",location.rgcData.streetNumber];
-             self.locationDescribeLab.text = [NSString stringWithFormat:@"具体描述：%@",location.rgcData.locationDescribe];
+            self.districtLab.text = [NSString stringWithFormat:@"区镇：%@",location.rgcData.district];
+            self.streetLab.text = [NSString stringWithFormat:@"街道：%@",location.rgcData.street];
+            self.streetNumberLab.text = [NSString stringWithFormat:@"街道号：%@",location.rgcData.streetNumber];
+            self.locationDescribeLab.text = [NSString stringWithFormat:@"具体描述：%@",location.rgcData.locationDescribe];
         }
         
-//                NSLog(@"netstate = %d",state);
+        //                NSLog(@"netstate = %d",state);
     };
     
     
@@ -224,13 +221,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
