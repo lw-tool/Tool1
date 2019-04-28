@@ -53,7 +53,14 @@
 
 #pragma mark onViewClick
 -(void)onViewClick:(id)sender{
-    UIImageWriteToSavedPhotosAlbum(self.mainImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(screenWidth, screenHeight - 80), NO, 0.0);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *screenShotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //将图片保存到相册
+    UIImageWriteToSavedPhotosAlbum(screenShotImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+//    UIImageWriteToSavedPhotosAlbum(self.mainImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 
 -(void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {

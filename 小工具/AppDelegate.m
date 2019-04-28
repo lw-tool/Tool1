@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "MainCollectionViewController.h"
 #import <UMCommon/UMCommon.h>
 #import <UMPush/UMessage.h>
 #import <UserNotifications/UserNotifications.h>
@@ -46,9 +47,9 @@
     }];
     
     
-    
-    MainViewController * main = [[MainViewController alloc] init];
-    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:main];
+    MainCollectionViewController * mainColl = [[MainCollectionViewController alloc] init];
+//    MainViewController * main = [[MainViewController alloc] init];
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:mainColl];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     return YES;
