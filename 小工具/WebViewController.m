@@ -7,14 +7,16 @@
 //
 
 #import "WebViewController.h"
+#import <WebKit/WebKit.h>
 
 
-
-@interface WebViewController ()
+@interface WebViewController ()<UIWebViewDelegate,WKNavigationDelegate>
 
 @property (nonatomic, strong) UIWebView * webView;
 
 @property (nonatomic, strong) UIButton * actionButton;
+
+@property (nonatomic, strong) UIAlertController * hudController;
 @end
 
 @implementation WebViewController
@@ -22,11 +24,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.actionButton];
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview: self.webView];
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
+    WKWebView *webView = [[WKWebView alloc]initWithFrame:self.view.bounds];
+    webView.allowsBackForwardNavigationGestures = YES;
+    webView.navigationDelegate = self;
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.url]];
+    [webView loadRequest:request];
+    [self.view addSubview:webView];
+    
+    self.hudController = [UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"huding", nil) preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:self.hudController animated:YES completion:nil];
     // Do any additional setup after loading the view.
+}
+
+#pragma mark UIWebviewdelegate
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+     [self.hudController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark onViewClick
@@ -61,7 +74,7 @@
         _actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _actionButton.frame = CGRectMake(0, 0, 50, 40);
         [_actionButton setTitle:NSLocalizedString(@"ScreenShot", nil) forState:UIControlStateNormal];
-        [_actionButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [_actionButton setTitleColor:[UIColor colorWithRed:237.0/255 green:80.0/255 blue:86.0/255 alpha:1] forState:UIControlStateNormal];
         _actionButton.titleLabel.font = [UIFont systemFontOfSize:14];
         [_actionButton addTarget:self action:@selector(onViewClick:) forControlEvents:UIControlEventTouchUpInside];
     }

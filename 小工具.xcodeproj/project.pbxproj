@@ -694,7 +694,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "小工具/小工具.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+
 				CODE_SIGN_STYLE = Automatic;
+
+				CODE_SIGN_STYLE = Manual;
+
 				DEVELOPMENT_TEAM = PVS2BL8MB4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -711,7 +715,11 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lw.tool1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+
 				PROVISIONING_PROFILE_SPECIFIER = "";
+
+				PROVISIONING_PROFILE_SPECIFIER = Tool1Development;
+
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
