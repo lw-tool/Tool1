@@ -16,4 +16,6 @@
 #define screenWidth [[UIScreen mainScreen] bounds].size.width
 #define screenHeight [[UIScreen mainScreen] bounds].size.height
 
+#define Policy @"https://www.jianshu.com/p/ee4a2e5e8677"
+
 #endif /* prc_header_h */

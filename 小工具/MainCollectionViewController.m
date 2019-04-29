@@ -14,6 +14,7 @@
 #import "TranslationViewController.h"
 #import "BMICalculatorViewController.h"
 #import "LocationViewController.h"
+#import "PolicyViewController.h"
 #import "Masonry/Masonry.h"
 
 @interface MainCollectionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -25,6 +26,8 @@
 @property (nonatomic, copy) NSArray * imageArr;
 
 @property (nonatomic, strong) UILabel * bottomLbl;
+
+@property (nonatomic, strong)UIButton * rightBtn;
 @end
 
 @implementation MainCollectionViewController
@@ -32,6 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"HomeTitle", nil);
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
     self.dataSourceArray = @[NSLocalizedString(@"RandomNumber", nil),NSLocalizedString(@"WebScreenshot", nil),NSLocalizedString(@"QRCodeMake", nil),NSLocalizedString(@"BaiduTrans", nil),NSLocalizedString(@"Location", nil),NSLocalizedString(@"BIMCalculate", nil)];
     self.imageArr = @[@"NewRandom.png",@"ScreenShot.png",@"QRCode.png",@"BDTransport.png",@"Location.png",@"BMICalculate.png"];
     // Do any additional setup after loading the view.
@@ -52,8 +56,24 @@
     }];
 }
 
+-(void)rightClick{
+    PolicyViewController * vc = [[PolicyViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 #pragma mark getter
+-(UIButton *)rightBtn{
+    if (!_rightBtn) {
+        _rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _rightBtn.frame = CGRectMake(0, 0, 80, 40);
+        [_rightBtn setTitle:NSLocalizedString(@"policy", nil) forState:UIControlStateNormal];
+        [_rightBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _rightBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+        [_rightBtn addTarget:self action:@selector(rightClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _rightBtn;
+}
+
 -(UICollectionView *)mainCollectionView{
     if (!_mainCollectionView) {
         UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc] init];
